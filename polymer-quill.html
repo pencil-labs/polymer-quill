@@ -102,6 +102,9 @@ Custom property | Description | Default
         border: 1px solid #ccc !important;
         opacity: 0.85;
       }
+      [hidden] {
+        display: none !important;
+      }
 
     </style>
     <div id="toolbar" hidden$='{{hideToolbar}}'>
@@ -118,7 +121,7 @@ Custom property | Description | Default
           <option value="5">Header 5</option>
           <option value="7">Normal</option>
         </select>
-        <select class="ql-header"  hidden$="{{!standardToolbar}}">
+        <select class="ql-header" hidden$="{{standardToolbar}}">
           <option value="1">Header 1</option>
           <option value="2">Header 2</option>
           <option value="3">Header 3</option>
@@ -139,7 +142,7 @@ Custom property | Description | Default
       <button class="ql-script" value="sub"></button>
       <button class="ql-script" value="super"></button>
       </span> -->
-      <span class="ql-formats" hidden$="{{standardToolbar}}">
+      <span class="ql-formats" hidden$="{{!standardToolbar}}">
         <button class="ql-header" value="1" title="Header 1"></button>
         <button class="ql-header" value="2" title="Header 2"></button>
         <button class="ql-blockquote" title="Blockquote"></button>
